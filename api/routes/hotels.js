@@ -67,8 +67,8 @@ router.get("/", async (req,res)=>{
         const hotels = await hotel.find()
         res.status(200).json(hotels)
         
-    }catch(err){
-        res.status(500).json(err)
+    }  catch(err){
+       next(err)
     }
 })
 export default router
